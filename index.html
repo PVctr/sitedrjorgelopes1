@@ -22,7 +22,7 @@
   :root:not([data-theme="light"]){--bg:#0B1626;--surface:#112239;--tint:#14304F;--blue:#7DB3F0;--on-blue:#08192E;--ink:#E6EEF8;--muted:#9FB2C8;--line:#234060}
 }
 :root[data-theme="dark"]{--bg:#0B1626;--surface:#112239;--tint:#14304F;--blue:#7DB3F0;--on-blue:#08192E;--ink:#E6EEF8;--muted:#9FB2C8;--line:#234060}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 100px);-webkit-text-size-adjust:100%}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);padding-top:38px;padding-bottom:84px}
 h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
@@ -218,7 +218,7 @@ svg.i{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:2;st
 .mbtns .btn,.mbtns .ghost{margin:0;text-decoration:none}
 .mapcard{position:relative;display:block;border-radius:24px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10;background:var(--tint);box-shadow:0 18px 40px -24px rgba(15,42,74,.45)}
 .mapcard svg{width:100%;height:100%;display:block;transition:transform .6s ease}
-.mapcard:hover svg{transform:scale(1.05)}
+
 .mrd{fill:none;stroke:var(--surface);stroke-linecap:round}
 .mriver{fill:var(--blue);opacity:.2}
 .mlabel{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--surface);color:var(--ink);border-radius:14px;padding:10px 14px;font-size:.88rem;font-weight:600;line-height:1.3;box-shadow:0 8px 22px -10px rgba(15,42,74,.5)}
@@ -456,7 +456,7 @@ footer p+p{margin-top:12px;font-size:.85rem;opacity:.85;max-width:80ch}
       <svg class="logo" viewBox="0 0 48 48" role="img" aria-label="Logomarca Lopes Bahia: escudo com check"><path class="o" d="M24 3.5 7.5 9.5V22c0 11 6.2 19.2 16.5 22.5C34.300 41.200 40.500 33 40.500 22V9.500z"/><path class="n" d="M24 8.200 11.800 12.600V22c0 8.700 4.700 15.200 12.200 18.200"/><path class="hl" d="M16.500 24 23 30.500 38.500 13"/><path class="ck" d="M16.500 24 23 30.500 38.500 13"/></svg>
       <span>Lopes Bahia<small>Advogados Associados</small></span>
     </div>
-    <nav class="nav" aria-label="Seções do site"><a href="https://lopesbahia.com.br/advogado-trabalhista-rio-de-janeiro/comendador-levy-gasparian-rj/#sobre" target="_blank" rel="noopener">Sobre</a><a href="https://lopesbahia.com.br/advogado-trabalhista-rio-de-janeiro/comendador-levy-gasparian-rj/#comendador" target="_blank" rel="noopener">Comendador</a><a href="https://lopesbahia.com.br/advogado-trabalhista-rio-de-janeiro/comendador-levy-gasparian-rj/#resultados" target="_blank" rel="noopener">Resultados</a><a href="https://lopesbahia.com.br/advogado-trabalhista-rio-de-janeiro/comendador-levy-gasparian-rj/#direitos" target="_blank" rel="noopener">Direitos</a><a href="https://lopesbahia.com.br/advogado-trabalhista-rio-de-janeiro/comendador-levy-gasparian-rj/#avaliacoes" target="_blank" rel="noopener">Avaliações</a><a href="https://lopesbahia.com.br/advogado-trabalhista-rio-de-janeiro/comendador-levy-gasparian-rj/#faq" target="_blank" rel="noopener">FAQ</a></nav>
+    <nav class="nav" aria-label="Seções do site"><a href="#sobre">Sobre</a><a href="#cobertura">Comendador</a><a href="#resultados">Resultados</a><a href="#servicos">Direitos</a><a href="#avaliacoes">Avaliações</a><a href="#faq">FAQ</a></nav>
     <a class="btn" data-call href="tel:"><svg class="i"><use href="#ph"/></svg><span data-num>Ligar</span></a>
   </div>
 </header>
@@ -686,13 +686,12 @@ footer p+p{margin-top:12px;font-size:.85rem;opacity:.85;max-width:80ch}
   <div class="wrap mgrid">
     <div>
       <h2>Atendimento em Comendador Levy Gasparian e região</h2>
-      <p class="lead">O escritório atende trabalhadores do município e de todo o Vale do Paraíba Fluminense. Abra o mapa para ver a localização e traçar a rota.</p>
+      <p class="lead">O escritório atende trabalhadores do município e de todo o Vale do Paraíba Fluminense. O atendimento é 100% online, sem precisar sair de casa.</p>
       <div class="mbtns">
-        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Comendador+Levy+Gasparian+RJ" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>Abrir no Google Maps</a>
-        <a class="ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Comendador+Levy+Gasparian+RJ" target="_blank" rel="noopener">Como chegar</a>
+        <a class="btn" href="#contato"><svg class="i"><use href="#wa"/></svg>Falar com o escritório</a>
       </div>
     </div>
-    <a class="mapcard" href="https://www.google.com/maps/search/?api=1&amp;query=Comendador+Levy+Gasparian+RJ" target="_blank" rel="noopener" aria-label="Abrir Comendador Levy Gasparian, RJ, no Google Maps">
+    <div class="mapcard" role="img" aria-label="Mapa ilustrativo de Comendador Levy Gasparian, RJ">
       <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <path class="mriver" d="M0 170C90 140 150 205 250 175S360 120 400 135V250H0z"/>
         <ellipse cx="320" cy="60" rx="70" ry="38" fill="#7FCB9A" opacity=".45"/>
@@ -700,8 +699,8 @@ footer p+p{margin-top:12px;font-size:.85rem;opacity:.85;max-width:80ch}
         <circle class="ring" cx="200" cy="172" r="10" fill="#E5483B" opacity=".5"/>
         <g class="pin"><path d="M200 108c-14 0-24 10-24 23 0 17 24 38 24 38s24-21 24-38c0-13-10-23-24-23z" fill="#E5483B"/><circle cx="200" cy="130" r="8.500" fill="#fff"/></g>
       </svg>
-      <span class="mlabel"><span>Comendador Levy Gasparian, RJ</span><small>Abrir no Google Maps</small></span>
-    </a>
+      <span class="mlabel"><span>Comendador Levy Gasparian, RJ</span><small>Atendimento online</small></span>
+    </div>
   </div>
 </section>
 
@@ -764,7 +763,6 @@ footer p+p{margin-top:12px;font-size:.85rem;opacity:.85;max-width:80ch}
     <p class="lead">Avaliações publicadas no Google por pessoas atendidas pelo escritório.</p>
     <p class="demo" id="demo" hidden>Modelo de layout: troque estes textos por avaliações reais, com autorização de quem as escreveu, antes de divulgar a página.</p>
     <div class="rv" id="rv"></div>
-    <p class="rbtn"><a class="ghost" href="https://www.google.com/search?sca_esv=e01ad63c021401d9&amp;rlz=1C1HKFL_pt-BRBR1198BR1198&amp;sxsrf=ANbL-n4hnxPxFZzIyGjwbH_VgDjZftVbpw:1772985283406&amp;kgmid=/g/11b61pvttw&amp;query=Advogado+Trabalhista+RJ+-+Dr.+Jorge+Lopes+%7C+Especialista+em+Direitos+Trabalhistas.&amp;shem=epsd1,rimspe,shrtsdl&amp;shndl=30&amp;source=sh/x/loc/uni/m1/1&amp;kgs=87b2d02909999007&amp;utm_source=epsd1,rimspe,shrtsdl,sh/x/loc/uni/m1/1" target="_blank" rel="noopener noreferrer">Ver todas as avaliações no Google</a></p>
     <p class="rnote">As avaliações refletem a experiência individual de cada pessoa e não garantem resultado em outros casos.</p>
   </div>
 </section>
